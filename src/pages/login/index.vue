@@ -1,13 +1,13 @@
 <template>
-  <div>Login</div>
+  <transition name="fade">
+    <div>Login</div>
+  </transition>
 </template>
 
 <script>
 export default {
-    name: "page-login"
-}
+  name: "page-login",
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -1,13 +1,13 @@
 <template>
-  <div>Home</div>
+  <transition name="fade">
+    <div>Home</div>
+  </transition>
 </template>
 
 <script>
 export default {
-    name: 'page-home'
-}
+  name: "page-home",
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

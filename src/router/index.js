@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
+import rule from "./rule";
+
 Vue.use(VueRouter);
 
 import { home, login } from "../pages";
@@ -20,11 +22,6 @@ const router = new VueRouter({
   ],
 });
 
-router.beforeEach((to, from, next) => {
-  //   if (to !== "login") {
-  //     return next();
-  //   }
-  next();
-});
+router.beforeEach(rule);
 
 export default router;

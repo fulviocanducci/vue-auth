@@ -11,7 +11,9 @@
     <div id="app">
       <router-link to="/">Go to Foo</router-link>
       <router-link to="/login">Go to Bar</router-link>
-      <router-view></router-view>
+      <transition> 
+        <router-view></router-view>
+      </transition>
     </div>
   </body>
 </html>

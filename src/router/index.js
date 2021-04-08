@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 import home from "../pages/home";
 import login from "../pages/login";
 
-const routers = new VueRouter({
+const router = new VueRouter({
   routes: [
     {
       name: "home",
@@ -21,11 +21,11 @@ const routers = new VueRouter({
   ],
 });
 
-routers.beforeEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
   //   if (to !== "login") {
   //     return next();
   //   }
   next();
 });
 
-export default routers;
+export default router;

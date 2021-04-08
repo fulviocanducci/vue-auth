@@ -1,10 +1,10 @@
 import Vue from "vue";
 
-import routers from "./routers";
+import router from "./router";
 
 Vue.config.productionTip = false;
 
 new Vue({
-  router: routers,
+  router,
   el: "#app",
 });

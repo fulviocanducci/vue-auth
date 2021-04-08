@@ -3,8 +3,7 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-import home from "../pages/home";
-import login from "../pages/login";
+import { home, login } from "../pages";
 
 const router = new VueRouter({
   routes: [

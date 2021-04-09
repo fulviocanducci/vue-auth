@@ -1,16 +1,18 @@
 <template>
   <div>
-    <form-login></form-login>
+    <header-page title="Login">
+      <form-login></form-login>
+    </header-page>
   </div>
 </template>
 
 <script>
-import formLogin from "./form";
+import FormLogin from "./components/FormLogin";
+import HeaderPage from "../../components/HeaderPage";
+
 export default {
   name: "page-login",
-  components: {
-    formLogin,
-  },
+  components: { FormLogin, HeaderPage },
 };
 </script>
 

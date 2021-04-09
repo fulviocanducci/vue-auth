@@ -2,13 +2,11 @@
   <div>
     <b-navbar toggleable="lg" type="dark" variant="info">
       <b-navbar-brand href="#">Administrator</b-navbar-brand>
-
       <b-navbar-toggle
         target="nav-collapse"
         is-nav
         v-if="show"
       ></b-navbar-toggle>
-
       <b-collapse id="nav-collapse" is-nav v-if="show">
         <b-navbar-nav>
           <router-link to="/" class="nav-link">Home</router-link>
@@ -18,10 +16,10 @@
         <b-navbar-nav class="ml-auto" v-if="show">
           <b-nav-item-dropdown right>
             <template #button-content>
-              <em>User</em>
+              <em> User </em>
             </template>
-            <router-link to="/profile" class="dropdown-item" role="menuitem"
-              >Profile</router-link
+            <b-dropdown-item href="#" v-on:click="profile"
+              >Profile</b-dropdown-item
             >
             <b-dropdown-item href="#" v-on:click="signOut"
               >Sign Out</b-dropdown-item
@@ -43,6 +41,11 @@ export default {
       this.$store.commit("del");
       this.$router.push("/login");
     },
+    profile: function() {
+      if (this.$router.currentRoute.name !== "profile") {
+        this.$router.push("/profile");
+      }
+    },
   },
   computed: {
     show: function() {
@@ -51,5 +54,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

@@ -5,7 +5,7 @@ import rule from "./rule";
 
 Vue.use(VueRouter);
 
-import { home, login } from "../pages";
+import { home, login, profile } from "../pages";
 
 const router = new VueRouter({
   routes: [
@@ -18,6 +18,11 @@ const router = new VueRouter({
       name: "login",
       path: "/login",
       component: login,
+    },
+    {
+      name: "profile",
+      path: "/profile",
+      component: profile,
     },
   ],
 });

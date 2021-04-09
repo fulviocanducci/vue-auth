@@ -1,6 +1,14 @@
+import token from "../utils/token";
+
 export default (to, from, next) => {
-  //   if (to !== "login") {
-  //     return next();
-  //   }
-  next();
+  const value = token.get();
+  if (to.name !== "login" && !value) {
+    next({ name: "login" });
+  } else {
+    if (to.name === "login" && value) {
+      next({ name: "home" });
+    } else {
+      next();
+    }
+  }
 };
